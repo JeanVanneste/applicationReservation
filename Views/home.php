@@ -11,6 +11,7 @@
     </h1>
     <form><!-- Ajouter action + method-->
         <button type="submit">Nouvelle réservation</button>
+    </form>
 </body>
 
 </html>
