@@ -1,10 +1,9 @@
 <?php
 
 print ("Test ok");
-print ("\n");
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=localhost;charset=utf8', 'root', '');
 }
 catch (Exception $e)
 {
@@ -13,6 +12,15 @@ catch (Exception $e)
 
 if ($bdd)
 {
-    print ("Connexion OK\n");
+    $reponse = $bdd->query('SELECT * FROM jeux_video');
+
+    while ($donnees = $reponse->fetch())
+    {
+        ?>
+        <p>
+            <strong>Jeu</strong> : <?php echo $donnees['nom']; ?><br />
+        </p>
+        <?php
+    }
 }
 ?>
