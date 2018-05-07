@@ -2,7 +2,7 @@
 
 echo ("Test ok");
 
-$connexion = mysql_connect("localhost/test", "root", "mcsuaptesbuf");
+$connexion = mysqli_connect("localhost/test", "root", "mcsuaptesbuf");
 if ($connexion) {
     print ("Connexion OK");
 }
