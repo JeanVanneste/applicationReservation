@@ -8,11 +8,14 @@ class Reservation {
     public $passengers;
     public $id = 1;
 
-    function __construct($destination, $seatTotal, $insurance)
+    function __construct($lastID, $destination, $seatTotal, $insurance)
     {
+        $this->id = $lastID + 1;
         $this->destination = $destination;
         $this->seatTotal = $seatTotal;
         $this->insurance = $insurance;
+
+        $this->passengers = [];
     }
 
     function getTotalPrice()
@@ -25,5 +28,7 @@ class Reservation {
         
     }
 }
+
+$reservation = new Reservation(1, "Bruxelles", 3, false);
 
 ?>
