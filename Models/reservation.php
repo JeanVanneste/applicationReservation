@@ -1,5 +1,7 @@
 <?php
 
+require_once passenger.php
+
 class Reservation {
 
     public $destination;
@@ -25,10 +27,16 @@ class Reservation {
 
     function addPassenger()
     {
-        
+        $passenger = new Passenger(0, "Jean", "Vanneste", 23, $id) 
+    }
+
+    function printReservation()
+    {
+        printf("%d, %s, %d, %s\n", $this->id, $this->destination, $this->seatTotal, $this->insurance);
     }
 }
 
 $reservation = new Reservation(1, "Bruxelles", 3, false);
+printReservation();
 
 ?>
