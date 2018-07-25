@@ -29,8 +29,9 @@ class Passenger
     }
 }
 
+/*
 $passenger = new Passenger(0, "Jean", "Vanneste", 23, 1);
 
 $passenger->printPassenger();
-
+*/
 ?>
