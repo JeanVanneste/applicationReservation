@@ -25,7 +25,7 @@ class Passenger
 
     function printPassenger()
     {
-        printf("%d, %s %s, %d ans\n", $this->id, $this->firstname, $this->lastname, $this->age);
+        printf("%d, %s %s, %d ans <br />", $this->id, $this->firstname, $this->lastname, $this->age);
     }
 }
 
