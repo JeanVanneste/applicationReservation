@@ -28,10 +28,4 @@ class Passenger
         printf("%d, %s %s, %d ans <br />", $this->id, $this->firstname, $this->lastname, $this->age);
     }
 }
-
-/*
-$passenger = new Passenger(0, "Jean", "Vanneste", 23, 1);
-
-$passenger->printPassenger();
-*/
 ?>
