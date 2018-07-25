@@ -22,7 +22,11 @@ class Reservation {
 
     function getTotalPrice()
     {
-        //Add passenger price + insurance if taken
+        $price = 0;
+        foreach ($this->passengers as $passenger) {
+            $price += $passenger->getPassengerPrice();
+        }
+        return $price;
     }
 
     function addPassenger($lastId, $firstname, $lastname, $age)
@@ -47,5 +51,7 @@ $reservation->addPassenger(0, "Basile", "Vanneste", 21);
 $reservation->addPassenger(1, "Jean", "Vanneste", 23);
 
 $reservation->printReservation();
+
+echo($reservation->getTotalPrice());
 
 ?>
