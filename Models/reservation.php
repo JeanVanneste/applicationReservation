@@ -26,6 +26,7 @@ class Reservation {
         foreach ($this->passengers as $passenger) {
             $price += $passenger->getPassengerPrice();
         }
+        if ($this->insurance){$price += 20;}
         return $price;
     }
 
