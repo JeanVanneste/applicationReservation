@@ -22,6 +22,15 @@ class Passenger
         if ($this -> age <= 12){return 10;}
         else {return 15;}
     }
+
+    function printPassenger()
+    {
+        printf("%d, %s %s, %d ans\n", $this->id, $this->firstname, $this->lastname, $this->age);
+    }
 }
+
+$passenger = new Passenger(0, "Jean", "Vanneste", 23, 1);
+
+$passenger->printPassenger();
 
 ?>
