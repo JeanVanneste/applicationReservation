@@ -1,6 +1,6 @@
 <?php
 
-require_once passenger.php
+require_once 'passenger.php';
 
 class Reservation {
 
@@ -17,7 +17,7 @@ class Reservation {
         $this->seatTotal = $seatTotal;
         $this->insurance = $insurance;
 
-        $this->passengers = [];
+        $this->passengers = array();
     }
 
     function getTotalPrice()
@@ -27,16 +27,23 @@ class Reservation {
 
     function addPassenger()
     {
-        $passenger = new Passenger(0, "Jean", "Vanneste", 23, $id) 
+        
+        $passengers->array_push{}
     }
 
     function printReservation()
     {
         printf("%d, %s, %d, %s\n", $this->id, $this->destination, $this->seatTotal, $this->insurance);
+        foreach ($passengers as $passenger) 
+        {
+            $passenger->printPassenger();
+        }
     }
 }
 
+
 $reservation = new Reservation(1, "Bruxelles", 3, false);
-printReservation();
+
+$reservation->printReservation();
 
 ?>
