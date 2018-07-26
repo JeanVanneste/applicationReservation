@@ -8,7 +8,7 @@
     <h1>
         Nouveau passager
     </h1>
-    <form method="post">
+    <form method="POST">
         <table>
             <tr>
                 <th>Nom</th>
@@ -26,7 +26,7 @@
         </table>
         <button type="submit">Etape suivante</button>
         <button type="reset">Retour à la page précédente</button>
-        <button type="">Annuler la réservation</button>
-</form>
+        <button type="submit" name="cancel" value = true>Annuler la réservation</button>
+    </form>
 </body>
 </html>

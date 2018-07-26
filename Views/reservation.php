@@ -16,7 +16,7 @@
     <p>
         L'assurance annulation coûte 20€ quelque soit le nombre de voyageurs
     </p>
-    <form method="post">
+    <form method="POST">
         <table>
             <tr>
                 <th>Destination</th>
@@ -40,7 +40,7 @@
             </tr>
         </table>
         <button type="submit">Etape suivante</button>
-        <button type="reset">Annuler la réservation</button>
+        <button type="submit" name="cancel" value = true>Annuler la réservation</button>
 
     </form>
 </body>
