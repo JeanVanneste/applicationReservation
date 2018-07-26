@@ -1,11 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Nouvelle réservation</title>
-</head>
-<body>
+<?php
 
-	Nouvelle réservation
+require_once("Models/reservation.php");
+require_once("Models/passenger.php");
 
-</body>
-</html>
+session_start();
+
+echo("router <br />");
+
+if (!empty($_POST["cancel"]) && $_POST["cancel"] == true)
+{
+	session_destroy();
+	include_once("Views/cancel.php");
+}
+else 
+{
+	if (empty($_SESSION['reservation']))
+	{
+		require_once("Controllers/newReservation.php");
+	}
+
+	else
+	{
+		require_once("Controllers/newPassenger.php");
+	}
+} 
+
+?>
