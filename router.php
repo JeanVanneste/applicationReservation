@@ -5,8 +5,6 @@ require_once("Models/passenger.php");
 
 session_start();
 
-echo("router <br />");
-
 if (!empty($_POST["cancel"]) && $_POST["cancel"] == true)
 {
 	session_destroy();
