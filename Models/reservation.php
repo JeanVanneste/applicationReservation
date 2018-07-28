@@ -44,6 +44,14 @@ class Reservation {
             $passenger->printPassenger();
         }
     }
+
+    function isComplete()
+    {
+        if (count($passengers) == $seatTotal)
+            {return true;}
+        else
+            {return false;}
+    }
 }
 
 ?>
