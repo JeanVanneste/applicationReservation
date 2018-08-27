@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nouvelle réservation</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h1>Nouvelle réservation</h1>
+	<form method="get" action="addReservation.php">
+		Destination : <br />
+		<select name="destination">
+			<option value="Amsterdam">Amsterdam</option>
+			<option value="Berlin">Berlin</option>
+			<option value="Bruxelles">Bruxelles</option>
+			<option value="Londres">Londres</option>
+			<option value="Paris">Paris</option>
+			<option value="Prague">Prague</option>
+		</select>
+		<br />
+		Nombre de place : <br />
+		<input type="number" name="seatTotal"><br />
+		Assurance annulation :<br />
+		<input type="checkbox" name="insurance"><br />
+		<button type="submit">Étape suivante</button>
+	</form>
+
+</html>
